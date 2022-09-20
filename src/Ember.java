@@ -13,4 +13,8 @@ public class Ember {
     public String toString() {
         return String.format("%30s %30s %30s", this.nev, this.szulDatum, this.szulHely);
     }
+    public int getSzuletesiEv() {
+        return Integer.parseInt(szulDatum.substring(0, 4));
+
+    }
 }
