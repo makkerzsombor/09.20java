@@ -1,6 +1,7 @@
 package Emberek;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.Date;
 
 public class Ember {
@@ -20,7 +21,6 @@ public class Ember {
     }
     public int getSzuletesiEv() {
         return Integer.parseInt(szulDatum.substring(0, 4));
-
     }
     public int getSzuletesiHonap(){
         return Integer.parseInt(szulDatum.split("-")[1]);
