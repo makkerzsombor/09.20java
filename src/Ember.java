@@ -1,3 +1,6 @@
+import java.time.LocalDate;
+import java.util.Date;
+
 public class Ember {
     private String nev;
     private String szulDatum;
@@ -23,6 +26,11 @@ public class Ember {
 
     public int getSzuletesiNap(){
         return Integer.parseInt(szulDatum.split("-")[2]);
+    }
+
+    public int getEletkor(){
+        LocalDate maiDatum = LocalDate.now();
+        return maiDatum.getYear() - getSzuletesiEv();
     }
 
 }
