@@ -11,10 +11,6 @@ public class Ember {
 
     @Override
     public String toString() {
-        return "Ember{" +
-                "nev='" + nev + '\'' +
-                ", szulDatum='" + szulDatum + '\'' +
-                ", szulHely='" + szulHely + '\'' +
-                '}';
+        return String.format("Név: %s, Születési Dátum: %s, Születési Hely: %s", nev, szulDatum, szulHely);
     }
 }
