@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println();
+        Ember human = new Ember("Gipsz Jakab","2001-1-1","Budapest");
+        System.out.println(human);
     }
 }
