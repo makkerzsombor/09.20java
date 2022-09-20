@@ -32,7 +32,21 @@ public class Ember {
 
     public int getEletkor(){
         LocalDate maiDatum = LocalDate.now();
-        return maiDatum.getYear() - getSzuletesiEv();
+        boolean voltESzuletesnapjaIden = (maiDatum.getMonth().getValue() > this.getSzuletesiHonap()
+            || (maiDatum.getMonth().getValue() == this.getSzuletesiHonap()
+                && maiDatum.getDayOfMonth() >= this.getSzuletesiNap()));
+        int eletkor = maiDatum.getYear() - this.getSzuletesiEv();
+        if (!voltESzuletesnapjaIden){
+            eletkor--;
+        }
+        return eletkor;
+    }
+
+    public int getEletkorDatumkent(){
+        LocalDate maiDatum = LocalDate.now();
+        LocalDate szulDatum = LocalDate.of(this.getSzuletesiEv(), this.getSzuletesiHonap(), this.getSzuletesiNap());
+        Period eltertIdo = Period.between(szulDatum, maiDatum);
+        return eltertIdo.getYears();
     }
 
 }
