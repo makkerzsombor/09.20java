@@ -11,6 +11,6 @@ public class Ember {
 
     @Override
     public String toString() {
-        return String.format("Név: %s, Születési Dátum: %s, Születési Hely: %s", nev, szulDatum, szulHely);
+        return String.format("%30s %30s %30s", this.nev, this.szulDatum, this.szulHely);
     }
 }
